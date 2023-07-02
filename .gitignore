@@ -57,3 +57,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# rough works
+rough.py
+empty.py
