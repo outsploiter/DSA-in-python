@@ -39,16 +39,16 @@ def binary_infinite_array(arr, target):
     start = 0
     end = 1
     while target > arr[end]:
-        temp = end
-        l = (end - start) + 1
-        end = (l * 2) + temp
-        start = temp + 1
+        temp = start
+        start = end + 1
+        len = end - temp + 1
+        end = len*2 + end
     return binary_search(arr, target, start, end)
 
 
 if __name__ == '__main__':
-    array = [2, 6, 9, 10, 17, 25, 48, 51, 87, 98, 100, 102, 120, 130 ,140]
+    array = [2, 6, 9, 10, 17, 25, 48, 51, 87, 98, 100, 102, 120, 130, 140]
     rev_array = [51, 48, 25, 17, 10, 9, 6, 2]
-    target = 100
+    target = 140
     ans = binary_infinite_array(array, target)
     print(f'Target found in index {ans}')
