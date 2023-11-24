@@ -28,10 +28,11 @@ def insertion_sort_while(arr):
         j = i
         while j > 0 and arr[j] < arr[j - 1]:
             arr[j], arr[j - 1] = arr[j - 1], arr[j]
+            j -= 1
     return arr
 
 
-arr = list(range(0, 100))
+arr = list(range(10, 1, -1))
 arr_2 = arr.copy()
 arr_3 = arr.copy()
 print(insertion_sort(arr))
