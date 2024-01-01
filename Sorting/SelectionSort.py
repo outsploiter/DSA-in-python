@@ -6,7 +6,6 @@ def selection_sort(arr):
             if arr[j] < arr[minimum]:
                 minimum = j
         arr[i], arr[minimum] = arr[minimum], arr[i]
-
     return arr
 
 
